@@ -8,7 +8,10 @@ RSpec::Core::RakeTask.new(:spec)
 
 desc 'Run the product Checkout data'
 task :Checkout do
-  puts "Seed data goes here"
+
+  project_root = File.dirname(File.absolute_path(__FILE__))
+  Dir.glob(project_root + '/../lib/*') { |file| require file }
 
   
+
 end
