@@ -14,15 +14,15 @@ A simple supermarket checkout system
 
   # Setting up products
 
-  product1 = Product.new('001', 'Curry Sauce', 1.95)
-  product2 = Product.new('002', 'Pizza', 5.99)
-  product3 = Product.new('003', 'Men T=Shirt', 25.00)
-  more products here
+  -product1 = Product.new('001', 'Curry Sauce', 1.95)
+  -product2 = Product.new('002', 'Pizza', 5.99)
+  -product3 = Product.new('003', 'Men T=Shirt', 25.00)
+  -more products here
 
 - to add new rules, define different discount rates here
 
   # setting up the promo rules
 
-  promotional_rules = []
-  promotional_rules << Rule.spent_over(30, 10)
-  promotional_rules << Rule.two_or_more('002', 3.99, 2)
+  -promotional_rules = []
+  -promotional_rules << Rule.spent_over(30, 10)
+  -promotional_rules << Rule.two_or_more('002', 3.99, 2)
