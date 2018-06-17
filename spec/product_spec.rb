@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Product do
   before :each do
-    @product = Product.new(001, "Sugar", 900)
+    @product = Product.new('001', "Sugar", 900)
   end
 
   it 'should return the product code' do
-    expect(@product.product_code).to eq(001)
+    expect(@product.product_code).to eq('001')
   end
 
   it 'should return the product name' do

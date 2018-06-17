@@ -4,12 +4,12 @@ class DiscountingService
     @rules = rules
   end
 
-  def price_used(product, count) # when buyer buy more than 2 product of same type
+  def price_used(product, count) # when buyer buy more than 2 product of same discount_rule_type
     new_price = nil
 
     rules.each do |rule|
-      if rule.discount__rule_type = Rule::DISCOUNT_RULE_TYPES[:two_or_more]
-        new_price = rule.apply_discount(product_code, product_count)
+      if rule.discount_rule_type == Rule::DISCOUNT_RULE_TYPE[:two_or_more]
+        new_price = rule.apply(product.product_code, count)
       end
     end
 
@@ -24,7 +24,7 @@ class DiscountingService
     total = subtotal
 
     rules.each do |rule|
-      if rule.discount_rule_type == Rule::DISCOUNT_RULE_TYPES[:spent_over]
+      if rule.discount_rule_type == Rule::DISCOUNT_RULE_TYPE[:spent_over]
         total = rule.apply(total)
       end
     end
