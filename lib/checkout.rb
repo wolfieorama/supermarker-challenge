@@ -20,7 +20,6 @@ class Checkout
     end
 
     total = discounting_service.apply_discounts(sub_total)
-
     total.round(2)
   end
 
@@ -37,6 +36,4 @@ class Checkout
   private
 
   attr_reader :discounting_service
-
-
 end

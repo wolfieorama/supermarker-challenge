@@ -1,5 +1,4 @@
 class DiscountingService
-
   def initialize(rules = [])
     @rules = rules
   end

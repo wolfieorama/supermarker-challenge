@@ -32,7 +32,6 @@ task :checkout do
   checkout.scan_item(product2)
   checkout.scan_item(product3)
 
-  puts "we have: #{checkout.basket}"
   puts "The Total to be paid:  #{checkout.total}"
 
   puts "---------------------------------Test 2: --------------------------------"
@@ -42,8 +41,6 @@ task :checkout do
   checkout.scan_item(product1)
   checkout.scan_item(product2)
 
-  puts "we have: #{checkout.basket}"
-  puts "we have: #{checkout.quantity_in_basket('002')}"
   puts "The Total to be paid:  #{checkout.total}"
 
   puts "---------------------------------Test 3: --------------------------------"
@@ -54,9 +51,6 @@ task :checkout do
   checkout.scan_item(product2)
   checkout.scan_item(product3)
 
-  puts "we have: #{checkout.basket}"
-  puts "we have: #{checkout.quantity_in_basket('002')}"
   puts "The Total to be paid:  #{checkout.total}"
-
 
 end

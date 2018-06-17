@@ -31,7 +31,7 @@ class Rule
   def self.spent_over(spent_amt, discount_rate)
     Rule.new(Rule::DISCOUNT_RULE_TYPE[:spent_over]) do |amt|
       if amt >= spent_amt
-        amt - amt * (discount_rate / 100)
+        amt - amt * discount_rate / 100
       else
         amt
       end
