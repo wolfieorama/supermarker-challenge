@@ -9,4 +9,6 @@ RSpec::Core::RakeTask.new(:spec)
 desc 'Run the product Checkout data'
 task :Checkout do
   puts "Seed data goes here"
+
+  
 end
